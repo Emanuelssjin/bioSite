@@ -4,12 +4,12 @@ body, h1, h2, h3, p, ul, ol, li, a {
   padding: 0;
 }
 
-/* Set a background color and default font-family */
+/* Set a background gradient from gray to blue and default font-family */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #F5F5F5;
+  background: linear-gradient(to bottom, #777777, #0055A4);
 }
 
 /* Style the header */
@@ -32,7 +32,7 @@ header navbar a {
 .button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #0055A4;
+  background-color: #888;
   color: white;
   text-decoration: none;
   border: none;
@@ -43,13 +43,13 @@ header navbar a {
 }
 
 .button:hover {
-  background-color: #003D7D;
+  background-color: #777;
 }
 
 /* Center the header navigation links */
 header navbar {
   text-align: center;
-  background-color: #003D7D; /* Darker color that blends with header */
+  background-color: #003D7D;
   padding: 10px 0;
 }
 
@@ -65,29 +65,43 @@ header navbar {
 .circle-picture {
   text-align: center;
   margin-top: 20px;
+  position: relative;
 }
 
 /* Style the circular image */
 .rounded-circle {
-  width: 500px; /* Adjust the size as needed */
-  height: 500px; /* Maintain the same width and height for a circular shape */
-  border-radius: 50%; /* Create a circular shape */
-  object-fit: cover; /* Maintain image proportions */
-}
-
-.card {
-  max-width: 800px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
   margin: 0 auto;
-  padding: 2rem;
-  background-color: white;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
 }
 
+/* Style the small pictures */
+.small-picture {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.small-picture.left {
+  left: 0;
+}
+
+.small-picture.right {
+  right: 0;
+}
+
+/* Style the square pictures */
 .square-picture-frame {
   max-width: 35%;
+  margin: 0 auto; /* Center the square images horizontally */
   overflow: hidden;
-  border: 5px solid #0055A4; /* Adjust the border color and size as needed */
+  border: 5px solid #0055A4;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
@@ -97,52 +111,13 @@ header navbar {
   height: auto;
 }
 
-.card-title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th, td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
-}
-
-/* Style the movie table header row */
-th {
-  background-color: #0055A4;
-  color: white;
-}
-
-/* Style the card content */
-.card-content {
-  margin-top: 10px;
-}
-
-/* Style the card for favorite foods */
-.card ol {
-  list-style-type: decimal;
-  margin-left: 20px;
-}
-
-.card ol li {
-  margin: 5px 0;
-}
-
-.card ol li a {
-  text-decoration: none;
-  color: #0055A4;
-  font-weight: bold;
-}
-
-.card ol li a:hover {
-  text-decoration: underline;
+.card {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 /* Style the footer */
